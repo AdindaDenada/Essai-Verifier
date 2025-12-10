@@ -1,0 +1,455 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== CONTAINER UTAMA ========== */
+.awal-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* ========== NAVBAR ========== */
+.awal-navbar {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+}
+
+.awal-nav-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.awal-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.awal-logo-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #2563eb;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.awal-check-icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.awal-brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.awal-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.awal-btn-login {
+  color: #374151;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+  font-size: 1rem;
+}
+
+.awal-btn-login:hover {
+  color: #111827;
+}
+
+.awal-btn-register {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.awal-btn-register:hover {
+  background-color: #1d4ed8;
+}
+
+/* ========== HERO SECTION ========== */
+.awal-hero-section {
+  flex: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.awal-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .awal-hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+  }
+}
+
+.awal-hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.awal-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.awal-hero-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+}
+
+.awal-btn-start {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+  transition: all 0.3s;
+  align-self: flex-start;
+}
+
+.awal-btn-start:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 20px 35px -5px rgba(37, 99, 235, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ========== ILLUSTRATION ========== */
+.awal-illustration-container {
+  position: relative;
+  width: 100%;
+}
+
+.awal-illustration-card {
+  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.awal-illustration-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.awal-chart-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 18rem;
+  position: relative;
+  z-index: 1;
+}
+
+.awal-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.875rem;
+  height: 12rem;
+}
+
+.awal-bar {
+  width: 2.5rem;
+  border-radius: 0.375rem 0.375rem 0 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.awal-bar:hover {
+  opacity: 0.8;
+  transform: translateY(-5px);
+}
+
+.awal-bar-1 {
+  height: 45%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  animation: barGrow 1s ease-out 0.1s backwards;
+}
+
+.awal-bar-2 {
+  height: 60%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+  animation: barGrow 1s ease-out 0.2s backwards;
+}
+
+.awal-bar-3 {
+  height: 75%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+  animation: barGrow 1s ease-out 0.3s backwards;
+}
+
+.awal-bar-4 {
+  height: 90%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+  animation: barGrow 1s ease-out 0.4s backwards;
+}
+
+.awal-bar-5 {
+  height: 95%;
+  background: linear-gradient(180deg, #fb923c, #f97316);
+  animation: barGrow 1s ease-out 0.5s backwards;
+  box-shadow: 0 4px 15px rgba(251, 146, 60, 0.5);
+}
+
+.awal-bar-6 {
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  animation: barGrow 1s ease-out 0.6s backwards;
+}
+
+.awal-bar-7 {
+  height: 85%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+  animation: barGrow 1s ease-out 0.7s backwards;
+}
+
+.awal-bar-8 {
+  height: 70%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+  animation: barGrow 1s ease-out 0.8s backwards;
+}
+
+@keyframes barGrow {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.awal-chart-base {
+  margin-top: 1.5rem;
+  height: 1rem;
+  background: linear-gradient(90deg, rgba(180, 83, 9, 0.7), rgba(180, 83, 9, 0.5));
+  border-radius: 9999px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== FOOTER ========== */
+.awal-footer {
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 2.5rem 1.5rem 2rem;
+  margin-top: auto;
+  width: 100%;
+}
+
+.awal-footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.awal-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.awal-footer-link {
+  color: #4b5563;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.awal-footer-link:hover {
+  color: #2563eb;
+}
+
+.awal-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.awal-social-btn {
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.awal-social-btn:hover {
+  color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.awal-social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.awal-copyright {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .awal-hero-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .awal-hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .awal-hero-description {
+    font-size: 1rem;
+  }
+  
+  .awal-nav-content {
+    flex-wrap: wrap;
+  }
+  
+  .awal-footer-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  
+  .awal-btn-start {
+    width: 100%;
+    text-align: center;
+  }
+
+  .awal-chart-container {
+    height: 14rem;
+  }
+
+  .awal-bar-chart {
+    height: 10rem;
+  }
+
+  .awal-bar {
+    width: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .awal-hero-title {
+    font-size: 1.875rem;
+  }
+
+  .awal-illustration-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .awal-bar {
+    width: 1.5rem;
+  }
+  
+  .awal-bar-chart {
+    gap: 0.5rem;
+  }
+}

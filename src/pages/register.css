@@ -1,0 +1,175 @@
+/* ========== 1. CONFIGURATION & RESET ========== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f3f4f6; /* Abu-abu sangat muda untuk background luar */
+}
+
+/* ========== 2. CONTAINER UTAMA ========== */
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ========== 3. CARD (KOTAK PUTIH) ========== */
+.register-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 520px; /* Lebar ideal untuk form registrasi */
+  padding: 3rem; /* Spasi dalam yang lega */
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+}
+
+/* ========== 4. HEADER & LOGO ========== */
+.register-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2.5rem;
+}
+
+.register-logo-icon {
+  width: 28px;
+  height: 28px;
+  color: #3b82f6; /* Biru utama icon */
+}
+
+.register-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827; /* Hampir hitam */
+}
+
+/* ========== 5. JUDUL & SUBJUDUL ========== */
+.register-title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.register-subtitle {
+  text-align: center;
+  color: #9ca3af; /* Abu-abu teks */
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ========== 6. FORM ELEMENTS ========== */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Jarak antar input */
+}
+
+.register-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.register-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.register-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e5e7eb; /* Border abu muda */
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s;
+  color: #1f2937;
+}
+
+.register-input::placeholder {
+  color: #d1d5db; /* Warna placeholder abu terang */
+}
+
+.register-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); /* Efek glow biru saat diklik */
+}
+
+/* ========== 7. PASSWORD EYE ICON ========== */
+.register-password-wrapper {
+  position: relative; /* Penting agar icon bisa absolute di dalamnya */
+}
+
+.register-toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+}
+
+.register-toggle-password:hover {
+  color: #4b5563;
+}
+
+.register-eye-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========== 8. TOMBOL DAFTAR ========== */
+.register-btn {
+  margin-top: 0.5rem;
+  background-color: #3b82f6; /* Biru cerah sesuai gambar */
+  color: white;
+  font-weight: 600;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.register-btn:hover {
+  background-color: #2563eb; /* Biru lebih gelap saat hover */
+}
+
+/* ========== 9. FOOTER (SUDAH PUNYA AKUN?) ========== */
+.register-login-text {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.register-login-link {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 4px;
+}
+
+.register-login-link:hover {
+  text-decoration: underline;
+}
